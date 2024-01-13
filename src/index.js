@@ -9,8 +9,10 @@ import { Provider } from 'react-redux';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <App />
-    </PersistGate>
+    <React.StrictMode>
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
+    </React.StrictMode>
   </Provider>
 );
